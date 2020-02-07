@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.cg</groupId>
-  <artifactId>jenkinapp</artifactId>
+  <artifactId>employeeapp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>jenkinapp Maven Webapp</name>
+  <name>employeeapp Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -38,6 +38,17 @@
     <finalName>jenkinapp</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+      	<plugin>
+      		<groupId>org.eclipse.jetty</groupId>
+      		<artifactId>jetty-maven-plugin</artifactId>
+      		<version>9.2.11.v20150529</version>
+      		<configuration>
+      			<httpConnector>
+      				<port>8088</port>
+      			</httpConnector>
+      		</configuration>
+      	</plugin>
+      	
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
